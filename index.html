@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: #272829;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .container>.navbar>.isi-navbar>.navbar1 {
+            color: aliceblue;
+        }
+
+        .navbar {
+
+            width: 100%;
+            z-index: 100;
+            background-color: transparent;
+            transition: background-color 0.4s ease-in-out, position 0.2s ease-in-out;
+            backdrop-filter: blur(0);
+        }
+
+        .navbar {
+
+            position: relative;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0);
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar1 h1 {
+            margin: 10px;
+        }
+
+        .isi-navbar {
+            height: 100%;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 10%;
+            margin-right: 10%;
+            position: relative;
+        }
+
+        .navbar2 ul {
+            display: flex;
+            list-style: none;
+
+        }
+
+        .navbar2 ul li {
+            margin: 12px;
+        }
+
+        .navbar2 ul li a {
+            color: #DDE6ED;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .navbar3 ul li a {
+            color: #DDE6ED;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .navbar2 ul li a:hover {
+            color: #F31559;
+
+        }
+
+        .logo {
+            font-size: 35px;
+            letter-spacing: 1px;
+            cursor: pointer;
+
+        }
+
+        span {
+            color: #F31559;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 60px;
+            padding-top: 7vh;
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-top: auto;
+
+            margin-bottom: auto;
+
+        }
+
+        .content img {
+            display: flex;
+            justify-content: center;
+            width: 300px;
+            height: 430px;
+            border-radius: 10px;
+        }
+
+        .gambar {
+
+            display: flex;
+            justify-content: end;
+        }
+
+        .nama {
+            margin-top: auto;
+            margin-bottom: auto;
+
+
+        }
+
+        .nama h1 {
+            margin: 10px 0px 10px;
+            color: #DDE6ED;
+            font-size: 50px;
+            --animate-delay: 0.7s;
+
+        }
+
+        .nama h3 {
+            letter-spacing: 2px;
+            color: #F31559;
+            --animate-delay: 0.5s;
+        }
+
+        .nama h2 {
+            margin-bottom: 30px;
+            color: #DDE6ED;
+            --animate-delay: 0.9s;
+        }
+
+        .about {
+            width: 100%;
+            height: 100vh;
+            background-color: #000000;
+            padding: 100px 0px;
+
+        }
+
+        .gambar-about img {
+            display: flex;
+            justify-content: center;
+            width: 300px;
+            height: 430px;
+            border-radius: 10px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .text-about {
+            margin: auto;
+        }
+
+        .text-about h2 {
+            color: #DDE6ED;
+            letter-spacing: 2px;
+            font-size: 40px;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+        }
+
+        .text-about h5 {
+            color: #DDE6ED;
+            letter-spacing: 2px;
+            font-size: 20px;
+            margin-bottom: 25px;
+            text-transform: capitalize;
+        }
+
+        .text-about p {
+            color: #DDE6ED;
+            letter-spacing: 1px;
+            line-height: 28px;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .gambar-about {
+            display: grid;
+            position: relative;
+            grid-template-columns: 1fr 1fr;
+            padding-top: 2vh;
+            grid-gap: 0cqb30px;
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-top: auto;
+            /* Margin atas auto */
+            margin-bottom: auto;
+
+        }
+
+        .obout-1 {
+
+            width: 100%;
+        }
+
+        .button {
+            background-color: transparent;
+            color: #DDE6ED;
+            border: 2px solid #F31559;
+            font-weight: bold;
+            padding: 13px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: .4s;
+            --animate-delay: 1.4s;
+        }
+
+        .button:hover {
+            background-color: #F31559;
+            cursor: pointer;
+        }
+
+        .blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            left: 60%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+
+
+        .gambar {
+            position: relative;
+            z-index: 10;
+        }
+
+        @media (max-width: 767px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            .navbar2 ul li a {
+                display: none;
+            }
+
+            .gambar-about {
+                grid-template-columns: 1fr;
+            }
+
+            .blob {
+                position: absolute;
+                width: 370px;
+                height: 350px;
+                left: 45%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+            }
+
+            .content img {
+                display: flex;
+                justify-content: center;
+                width: 250px;
+                height: 370px;
+                border-radius: 10px;
+            }
+
+            .gambar {
+                display: flex;
+                justify-content: center;
+            }
+
+            .nama h1 {
+                margin: 10px 0px 10px;
+                font-size: 34px;
+                --animate-delay: 0.7s;
+            }
+
+            .nama h3 {
+                letter-spacing: 2px;
+                color: #F31559;
+                font-size: 15px;
+                --animate-delay: 0.5s;
+            }
+
+            .about {
+                width: 100%;
+                height: 120vh;
+                background-color: #000000;
+                padding: 100px 0px;
+            }
+
+            .nama h2 {
+                margin-bottom: 35px;
+                font-size: 20px;
+                --animate-delay: 0.9s;
+                margin-bottom: 45px;
+            }
+
+
+            #hamburger {
+                position: absolute;
+                display: block;
+                right: 16px;
+                margin-top: 15px;
+                z-index: 20;
+                background-color: transparent;
+                border: none;
+            }
+
+            .hamburger-garis {
+                width: 25px;
+                height: 2px;
+                margin-top: 4px;
+                margin-bottom: 4px;
+                z-index: 1000;
+                display: block;
+                background-color: #F31559;
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+                transform-origin: top left;
+                transform-origin: bottom left;
+            }
+
+            .hamburger-active {
+                z-index: 1000;
+            }
+
+            .hamburger-active>span:nth-child(1) {
+                transform: rotate(28deg);
+
+            }
+
+            .hamburger-active>span:nth-child(3) {
+                transform: rotate(-28deg);
+
+            }
+
+            .hamburger-active>span:nth-child(2) {
+                scale: 0;
+            }
+
+            .navbar5 {
+                position: absolute;
+                display: none;
+                bottom: 50px;
+            }
+
+            #navmenu {
+                position: absolute;
+                right: 20px;
+                top: 60px;
+
+                z-index: 100;
+                border-radius: 5px;
+
+
+
+            }
+
+            .navbar6 {
+                background-color: #000000;
+            }
+
+            .navbar6 ul li a {
+                color: #DDE6ED;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.2s ease-in-out;
+                padding: 8px;
+            }
+
+            .navbar6 ul li a:hover {
+                color: #F31559;
+
+            }
+
+            .navbar6 ul {
+                list-style: none;
+                padding: 10px;
+            }
+
+            .navbar6 ul li {
+
+                padding: 3px;
+            }
+
+            .gambar-about img {
+                display: flex;
+                justify-content: center;
+                width: 250px;
+                height: 370px;
+                border-radius: 10px;
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
+
+            .text-about h2 {
+                letter-spacing: 2px;
+                font-size: 25px;
+                margin-bottom: 20px;
+                margin: auto 20px 15px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .text-about h5 {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            .text-about p {
+                font-size: 15px;
+                margin-bottom: 30px;
+                text-align: justify;
+                letter-spacing: 1px;
+            }
+
+            .blob1 {
+                position: absolute;
+                z-index: 1;
+                width: 370px;
+                height: auto;
+                left: 46%;
+                top: 25%;
+                transform: translate(-50%, -50%);
+            }
+
+            .box {
+                display: grid;
+                grid-template-columns: 1fr;
+
+                grid-gap: 20px;
+            }
+
+            .box .card img {
+                width: 300px;
+                height: 150px;
+            }
+
+            .title h2 {
+                padding: 80px 0px 30px 0px;
+                display: flex;
+                justify-content: center;
+                color: #DDE6ED;
+                letter-spacing: 2px;
+                font-size: 30px;
+                margin-bottom: 20px;
+                text-transform: capitalize;
+            }
+
+            .contact-kirim {
+                margin-left: 15%;
+                margin-right: 15%;
+            }
+
+            .sidebar {
+                display: grid;
+                grid-template-columns: 1fr;
+                width: 100%;
+                height: 50vh;
+                background-color: #272829;
+                margin: auto;
+            }
+
+            .tautan {
+                margin: 30px 40px;
+            }
+
+            .hubungi {
+                margin: 30px 40px;
+            }
+
+
+        }
+
+
+        @media (min-width: 767px) {
+            .blob1 {
+                position: absolute;
+                z-index: 1;
+                width: 500px;
+                height: auto;
+                left: 21%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .box {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                margin-left: 100px;
+                margin-right: 100px;
+                grid-gap: 20px;
+            }
+
+            .box .card img {
+                width: 300px;
+                height: 150px;
+            }
+
+            .title h2 {
+                padding: 80px 0px 30px 0px;
+                display: flex;
+                justify-content: center;
+                color: #DDE6ED;
+                letter-spacing: 2px;
+                font-size: 30px;
+                margin-bottom: 20px;
+                text-transform: capitalize;
+            }
+
+            .contact-kirim {
+                margin-left: 30%;
+                margin-right: 30%;
+            }
+
+            .sidebar {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                width: 100%;
+                height: 50vh;
+                background-color: #272829;
+                margin: auto;
+            }
+
+            .tautan {
+                margin: 30px;
+            }
+
+            .hubungi {
+                margin: 30px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+
+            .navbar6 {
+                display: none;
+            }
+
+            .navbar3 {
+                display: none;
+            }
+
+            .blob {
+                position: absolute;
+                width: 400px;
+                height: 350px;
+                left: 55%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+            }
+
+            .gambar-about {
+                display: grid;
+                position: relative;
+                grid-template-columns: 1fr 1fr;
+                padding-top: 2vh;
+                grid-gap: 50px;
+                margin-left: 15%;
+                margin-right: 15%;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+
+
+            .blob1 {
+                position: absolute;
+                z-index: 1;
+                width: 450px;
+                height: auto;
+                left: 22%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+
+
+            .content img {
+                display: flex;
+                justify-content: center;
+                width: 250px;
+                height: 370px;
+                border-radius: 10px;
+            }
+
+            .contact-kirim {
+                margin-left: 20%;
+                margin-right: 20%;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .navbar6 {
+                display: none;
+
+            }
+
+            .navbar3 {
+                display: none;
+            }
+
+            .blob1 {
+                position: absolute;
+                z-index: 1;
+                width: 500px;
+                height: auto;
+                left: 15%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .box {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                margin-left: 160px;
+                margin-right: 160px;
+                grid-gap: 20px;
+            }
+
+            .box .card img {
+                width: 400px;
+                height: 200px;
+            }
+
+            .title h2 {
+                padding: 80px 0px 30px 0px;
+                display: flex;
+                justify-content: center;
+                color: #DDE6ED;
+                letter-spacing: 2px;
+                font-size: 40px;
+                margin-bottom: 20px;
+                text-transform: capitalize;
+            }
+
+            .contact-kirim {
+                margin-left: 30%;
+                margin-right: 30%;
+            }
+
+            .sidebar {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                width: 100%;
+                height: 50vh;
+                background-color: #272829;
+                margin: auto;
+            }
+
+            .tautan {
+                margin: 20px auto;
+            }
+
+            .hubungi {
+                margin: 20px auto;
+            }
+        }
+
+        .navbar-fixed {
+            position: fixed;
+            backdrop-filter: blur(5px);
+            box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .projects {
+            width: 100%;
+            height: 110vh;
+            background-color: #272829;
+        }
+
+
+
+
+
+
+
+        .card {
+            display: flex;
+            justify-content: center;
+        }
+
+        .card1 {
+            background-color: #F8FAFC;
+            box-shadow: -4px -9px 20px rgba(255,
+                    255,
+                    255, .2);
+            height: 98%;
+            width: auto;
+            position: relative;
+            --animate-delay: 0.5s;
+
+        }
+
+        .card1 .nama-project h2 {
+            position: absolute;
+            z-index: -1;
+            bottom: -1%;
+            display: flex;
+            width: 100%;
+            height: 15%;
+
+            background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0), rgba(5, 5, 5, 1));
+            justify-content: center;
+            align-items: center;
+            transition: .3s ease-in-out;
+            color: #DDE6ED;
+
+        }
+
+        .card1:hover .nama-project h2 {
+            display: block;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            justify-content: center;
+            align-items: center;
+            transition: .5s ease-in-out;
+
+        }
+
+        .contact {
+            width: 100%;
+            height: 100vh;
+            background-color: #000000;
+        }
+
+        .contact-nama h2 {
+            padding: 80px 0px 30px 0px;
+            display: flex;
+            justify-content: center;
+            color: #DDE6ED;
+            letter-spacing: 2px;
+            font-size: 40px;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+        }
+
+        .contact-kirim label {
+            color: #DDE6ED;
+            font-weight: bold;
+            margin-top: 10px;
+
+
+        }
+
+
+
+        .contact-kirim input {
+            width: 100%;
+            border-radius: 5px;
+            border: 2px solid #272829;
+            background-color: rgba(0, 0, 0, 0);
+            outline: none;
+            color: #DDE6ED;
+            height: 30px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+
+        }
+
+        .contact-kirim textarea {
+            width: 100%;
+            border-radius: 5px;
+            border: 2px solid #272829;
+            background-color: rgba(0, 0, 0, 0);
+            outline: none;
+            color: #DDE6ED;
+            height: 150px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+
+        }
+
+        .contact-kirim button {
+
+            background-color: transparent;
+            color: #DDE6ED;
+            border: 2px solid #F31559;
+            font-weight: bold;
+            padding: 13px 30px;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: .4s;
+            --animate-delay: 1.4s;
+
+        }
+
+        .contact-kirim button:hover {
+            background-color: #F31559;
+            cursor: pointer;
+        }
+
+
+
+        .hubungi h3,
+        p {
+            color: #DDE6ED;
+        }
+
+        .hubungi p {
+            padding: 10px 0px 0px 0px;
+            color: #b9b9ba;
+        }
+
+        .hubungi h3 {
+            font-size: 29px;
+        }
+
+        .tautan h3 {
+            font-size: 29px;
+        }
+
+        .tautan h3,
+        ul li a {
+            color: #DDE6ED;
+        }
+
+        .tautan ul li {
+            list-style: none;
+            padding: 10px 0px 0px 0px
+        }
+
+        .tautan ul li a {
+            text-decoration: none;
+            transition: 0.3 ease-in-out;
+            color: #b9b9ba;
+        }
+
+        .tautan ul li a:hover {
+            color: #F31559;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar animate__animated animate__fadeInDown">
+            <div class="isi-navbar ">
+                <div class="navbar1 ">
+                    <h2 class="logo ">Porto<span>folio</span></h2>
+                </div>
+                <div class="navbar2">
+                    <ul>
+                        <li> <a class="menu-link" href="#content">HOME</a></li>
+                        <li> <a href="#about" class="menu-link">ABOUT</a></li>
+                        <li> <a class="menu-link" href="#projects">PROJECTS</a></li>
+                        <li> <a class="menu-link" href="#contact">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="navbar3">
+                    <button id="hamburger" class="hamburger1">
+                        <span class="hamburger-garis"></span>
+                        <span class="hamburger-garis"></span>
+                        <span class="hamburger-garis"></span>
+                    </button>
+                    <div id="navmenu" class="navbar5 navbar6">
+                        <ul>
+                            <li> <a class="menu-link" href="#content">HOME</a></li>
+                            <li> <a href="#about" class="menu-link">ABOUT</a></li>
+                            <li> <a class="menu-link" href="#projects">PROJECTS</a></li>
+                            <li> <a href="">CONTACT</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content" id="content">
+            <div class="nama animated-scroll"> <!-- Tambahkan kelas .animated-scroll di sini -->
+                <h3 class="animate__animated animate__fadeInUp animate__delay-1s animated-element animated-scroll">
+                    Hello,Nama Saya</h3>
+                <h1 class="animate__animated animate__fadeInUp animate__delay-1s animated-element animated-scroll">Front
+                    <span>Waruwu</span>
+                </h1>
+                <h2 class="animate__animated animate__fadeInUp animate__delay-1s animated-element animated-scroll">Saya
+                    Seorang Web
+                    Developer</h2>
+                <a class="button menu-link animate__animated animate__fadeInUp animate__delay-1s animated-element animated-scroll"
+                    href="#about">ABOUTME</a>
+            </div>
+            <div class="gambar">
+                <img src="WhatsApp Image 2023-08-03 at 18.27.32.jpeg" alt="">
+                <span class="blob">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#FF0066"
+                            d="M59.5,-41C75.4,-27.5,85.6,-2.8,80.3,17.6C75.1,38,54.5,54.1,32.3,63.4C10.2,72.6,-13.5,74.8,-31,65.8C-48.5,56.8,-60,36.6,-66.7,13.4C-73.4,-9.7,-75.3,-35.7,-63.5,-48.3C-51.6,-60.9,-25.8,-60.1,-2,-58.5C21.8,-56.9,43.6,-54.5,59.5,-41Z"
+                            transform="translate(100 100)" />
+                    </svg>
+                </span>
+            </div>
+        </div>
+
+    </div>
+    <div class="about" id="about">
+        <div class="obout-1">
+            <div class="gambar-about">
+                <img src="WhatsApp Image 2023-08-03 at 23.06.01.jpeg" alt="">
+                <span class="blob1 blob2">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#FF0066"
+                            d="M59.5,-41C75.4,-27.5,85.6,-2.8,80.3,17.6C75.1,38,54.5,54.1,32.3,63.4C10.2,72.6,-13.5,74.8,-31,65.8C-48.5,56.8,-60,36.6,-66.7,13.4C-73.4,-9.7,-75.3,-35.7,-63.5,-48.3C-51.6,-60.9,-25.8,-60.1,-2,-58.5C21.8,-56.9,43.6,-54.5,59.5,-41Z"
+                            transform="translate(100 100)" />
+                    </svg>
+                </span>
+                <div class="text-about animate__animated animated-element animated-scroll ">
+                    <h2>Tentang Saya</h2>
+                    <h5>Devoloper <span>& Desaigner</span></h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo repellat qui nesciunt, officia
+                        minima,
+                        repudiandae aperiam animi mollitia libero iste cum dolore beatae quia asperiores ex architecto
+                        consectetur iure voluptatum!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="projects" class="projects">
+        <div class="title">
+            <h2>PROJECTS</h2>
+        </div>
+        <div class="box">
+            <div class="card">
+                <div class="card1 animate__animated  animated-element ">
+                    <img src="Screenshot 2023-08-05 005631.png" alt="">
+                    <div class="nama-project">
+                        <h2>Portofolio</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card1 animate__animated animated-element">
+                    <img src="Screenshot 2023-08-05 005631.png" alt="">
+                    <div class="nama-project">
+                        <h2>Gereja</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card1 animate__animated  animated-element">
+                    <img src="Screenshot 2023-08-05 005631.png" alt="">
+                    <div class="nama-project">
+                        <h2>Sewah Kost</h2>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="contact" id="contact">
+        <div class="contact-nama">
+            <h2>CONTACT</h2>
+            <div class="contact-kirim  animate__animated  animated-element">
+                <label for="name">Nama</label>
+                <input type="text" id="name">
+            </div>
+            <div class="contact-kirim  animate__animated  animated-element">
+                <label for="email">Email</label>
+                <input type="text" id="email">
+            </div>
+            <div class="contact-kirim animate__animated  animated-element">
+                <label for="pesan">Pesan</label>
+                <textarea name="pesan" id="pesan" cols="30" rows="10"></textarea>
+                <button>Kirim</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="hubungi">
+            <h3>Hubungi Kami</h3>
+            <p>Jl.Ukrim<br>Yogyakarta</p>
+        </div>
+        <div class="tautan">
+            <h3>Tautan</h3>
+            <ul>
+                <ul>
+                    <li> <a class="menu-link" href="#content">HOME</a></li>
+                    <li> <a href="#about" class="menu-link">ABOUT</a></li>
+                    <li> <a class="menu-link" href="#projects">PROJECTS</a></li>
+                    <li> <a class="menu-link" href="#contact">CONTACT</a></li>
+                </ul>
+            </ul>
+
+        </div>
+
+    </div>
+    </div>
+    <script>
+        window.onscroll = function () {
+            const navbar = document.querySelector('.navbar');
+            const fixenav = navbar.offsetTop;
+
+            if (window.pageYOffset > fixenav) {
+                navbar.classList.add('navbar-fixed')
+            } else {
+                navbar.classList.remove('navbar-fixed')
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuLinks = document.querySelectorAll(".menu-link");
+            menuLinks.forEach(link => {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const targetId = link.getAttribute("href");
+                    const targetElement = document.querySelector(targetId);
+                    const yOffset = -10; // Sesuaikan dengan offset yang Anda inginkan (misalnya untuk menghindari navbar menutupi konten)
+                    const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+                    window.scrollTo({ top: y, behavior: "smooth" });
+                });
+            });
+        });
+        // Fungsi untuk memulai animasi untuk elemen-elemen dengan kelas "animated-element"
+        function mulaiAnimasiElement() {
+            const elemen = document.querySelectorAll('.animated-element');
+            const options = {
+                threshold: 0.3,
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate__fadeInUp');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+
+            elemen.forEach(element => {
+                observer.observe(element);
+            });
+        }
+
+        function mulaiAnimasiScroll() {
+            const elemen = document.querySelectorAll('.animated-scroll');
+            const options = {
+                threshold: 0.3,
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate__fadeInUp');
+                        // Hapus baris berikut agar elemen tetap diawasi dan dianimasikan ulang setiap kali Anda menggulir ke elemen tersebut
+                        // observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+
+            elemen.forEach(element => {
+                observer.observe(element);
+            });
+        }
+
+
+
+        // Mulai animasi untuk elemen saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', function () {
+            mulaiAnimasiElement();
+            mulaiAnimasiScroll();
+        });
+
+        // Fungsi untuk menghapus kelas animasi sebelum beralih ke bagian
+        function hapusAnimasiDariElement() {
+            const elemenAnimasi = document.querySelectorAll('.animated-element');
+            elemenAnimasi.forEach(element => {
+                element.classList.remove('animate__fadeInUp');
+            });
+        }
+
+        // Atur ulang animasi saat mengklik tautan menuju suatu bagian
+        const tautanMenu = document.querySelectorAll('.menu-link');
+        tautanMenu.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                hapusAnimasiDariElement();
+                // Tambahkan penundaan agar animasi dapat dijalankan kembali setelah kelas dihapus
+                setTimeout(mulaiAnimasiElement, 50);
+                // Gulirkan ke bagian tujuan
+                const yOffset = -100;
+                const idTujuan = link.getAttribute('href');
+                const elemenTujuan = document.querySelector(idTujuan);
+                const y = elemenTujuan.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            });
+        });
+
+        // Fungsi untuk memulai animasi saat halaman di-scroll
+        window.addEventListener('scroll', function () {
+            mulaiAnimasiScroll();
+        });
+        const hamburger = document.querySelector('#hamburger');
+        const navmenu = document.querySelector('#navmenu');
+
+        hamburger.addEventListener('click', function () {
+            hamburger.classList.toggle('hamburger-active')
+            navmenu.classList.toggle('navbar5')
+        })
+    </script>
+</body>
+
+</html>
