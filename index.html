@@ -18,8 +18,9 @@
 
         .container {
             background-color: #272829;
-            height: 100vh;
+            height: 100%;
             width: 100%;
+            padding-bottom: 20px ;
         }
 
         .container>.navbar>.isi-navbar>.navbar1 {
@@ -154,7 +155,7 @@
 
         .about {
             width: 100%;
-            height: 100vh;
+            height: 100%;
             background-color: #000000;
             padding: 100px 0px;
 
@@ -302,10 +303,9 @@
 
             .about {
                 width: 100%;
-                height: 120vh;
+                height: 100%;
                 background-color: #000000;
                 padding: 100px 0px;
-                overflow: auto;
             }
 
             .nama h2 {
@@ -447,7 +447,7 @@
             .box {
                 display: grid;
                 grid-template-columns: 1fr;
-
+                padding-bottom: 20px;
                 grid-gap: 20px;
             }
 
@@ -491,6 +491,22 @@
 
 
         }
+        .card1 .nama-project h2 {
+            position: absolute;
+            z-index: -100;
+            bottom: -1%;
+            display: flex;
+            width: 100%;
+            height: 15%;
+            font-size: 18px;
+            background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0), rgba(5, 5, 5, 1));
+            justify-content: center;
+            align-items: center;
+            transition: .3s ease-in-out;
+            color: #DDE6ED;
+
+        }
+
 
 
         @media (min-width: 767px) {
@@ -636,6 +652,7 @@
                 margin-left: 160px;
                 margin-right: 160px;
                 grid-gap: 20px;
+                padding-bottom: 20px;
             }
 
             .box .card img {
@@ -685,7 +702,7 @@
 
         .projects {
             width: 100%;
-            height: 110vh;
+            height: 100%;
             background-color: #272829;
         }
 
@@ -708,7 +725,7 @@
 
         .card1 .nama-project h2 {
             position: absolute;
-            z-index: -1;
+            z-index: -100;
             bottom: -1%;
             display: flex;
             width: 100%;
@@ -920,11 +937,11 @@
                 <div class="text-about animate__animated animated-element animated-scroll ">
                     <h2>Tentang Saya</h2>
                     <h5>Devoloper <span>& Desaigner</span></h5>
-                    <p>Saya Frontment Kurnianus Waruwu mahasiswa semester 5 di Universitas Kristen Immanuel Yogyakarta,
+                    <p>Saya Frontment Kurnianus Waruwu mahasiswa semester 7 di Universitas Kristen Immanuel Yogyakarta,
                         lahir pada tanggal 2 Agustus 2004 dan sekarang berada dibidang IT,
-                        Untuk Bahasa pemrograman yang saya kuasai PYTHON,PHP,JAVASCRIPT.
-                        Untuk framework ada Django,Laravel dan Boostrap.
-                        Frontend CSS,HTML.
+                        Untuk Bahasa pemrograman yang saya kuasai PYTHON,PHP,JAVASCRIPT,JAVA.
+                        Untuk framework ada Django, Laravel, Codeigniter 3 dan Boostrap.
+                        Frontend CSS,HTML. Untuk Database MYSQL, SQLSERVER, POSTGRESQL.
                     </p>
                 </div>
             </div>
@@ -971,6 +988,46 @@
                     <a href="#">
                         <div class="nama-project">
                             <h2>Apotek</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card1 animate__animated  animated-element">
+                    <img src="jurnal.png" alt="">
+                    <a href="#">
+                        <div class="nama-project">
+                            <h2>Jurnal</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card1 animate__animated  animated-element">
+                    <img src="nawasenacompanyprofile.png" alt="">
+                    <a href="https://www.nawasenatunas.or.id/">
+                        <div class="nama-project">
+                            <h2>Company Profile</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card1 animate__animated  animated-element">
+                    <img src="adminnawasena.png" alt="">
+                    <a href="https://www.nawasenatunas.or.id/auth">
+                        <div class="nama-project">
+                            <h2>Admin Nawasena</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card1 animate__animated  animated-element">
+                    <img src="gereja1.png" alt="">
+                    <a href="https://wiljawa.kgpm.org/Auth">
+                        <div class="nama-project">
+                            <h2>Admin Gereja</h2>
                         </div>
                     </a>
                 </div>
